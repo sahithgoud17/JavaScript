@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Storage</title>
+    </head>
+
+    <body>
+
+        <h1>Storage</h1>
+        <button  value="Add" type = "submit" name = "add" onclick="addlocalStorage()">LocalStorageAdd</button>
+
+        <button  value="Add" type = "submit" name = "add" onclick="addsessionStorage()">SessionStorageAdd</button>
+
+        <script>
+
+            var l=0;            
+            var s=0;
+
+            function addlocalStorage(){
+                l++;
+                localStorage.setItem(l,1)
+                console.log("Local Storage Key: " + l + " its value: " + localStorage.getItem(l))
+            }
+
+            function addsessionStorage(){
+                s++;
+                sessionStorage.setItem(s,1)
+                console.log("Sessiom Storage Key: " + s + " its value: " + sessionStorage.getItem(s))
+            }
+
+        </script>
+
+    </body>
+
+</html>
+
